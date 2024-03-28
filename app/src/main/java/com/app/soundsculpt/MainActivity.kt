@@ -40,8 +40,6 @@ class MainActivity : AppCompatActivity() {
             .build()
             .create(MusicInterface::class.java)
         val retrofitData = retrofitBuilder.getData("arjan dhillon")
-
-
         
         retrofitData.enqueue(object : Callback<MusicEntity?> {
             override fun onResponse(call: Call<MusicEntity?>, response: Response<MusicEntity?>) {
